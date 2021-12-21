@@ -4,6 +4,10 @@ pipeline {
     environment {
         BLA = "foo"
      }
+
+    options {
+        
+    }
          
     stages {
 
@@ -14,9 +18,9 @@ pipeline {
                     )             
             }
         }
-        stage("${GREEN}Unit tests stage${END}") {
+        stage("Unit tests stage") {
             steps {
-                echo "${BLA}"
+                echo "${GREEN}${BLA}${END}"
                 sh "tox -e py27"
             }
         }
