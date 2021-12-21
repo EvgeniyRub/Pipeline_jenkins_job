@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "jenkins_agent_VM1" }
+    agent { label "agent_linux_1" }
 
     stages {
 
