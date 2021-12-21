@@ -25,11 +25,17 @@ pipeline {
                 sh "tox -e cover"
             }
         }
+        stage("Packages stage") {
+            steps {
+                sh "python setup.py bdist_wheel"
+            }
+        }
     }
 
     post {
         success {
-            archiveArtifacts("doc/source/*")
+            archiveArtifacts("doc/source/*,dist/*.whl")
+            coberturaReportFile: 'cover/coverage.xml'
         }
     }
 }
