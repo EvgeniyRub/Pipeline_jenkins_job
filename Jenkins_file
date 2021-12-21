@@ -5,7 +5,6 @@ pipeline {
         BLA = "foo"
      }
          
-
     stages {
 
         stage("Checkout stage") {
