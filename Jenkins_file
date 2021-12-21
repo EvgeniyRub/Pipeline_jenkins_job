@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Unit tests stage") {
             steps {
-                echo "${GREEN}${BLA}${END}"
+                echo -e "${GREEN}${BLA}${END}"
                 sh "tox -e py27"
             }
         }
