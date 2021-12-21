@@ -5,9 +5,9 @@ pipeline {
         BLA = "foo"
      }
 
-    options {
-        
-    }
+    /* options {
+
+    } */
          
     stages {
 
