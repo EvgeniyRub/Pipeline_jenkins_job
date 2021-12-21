@@ -6,7 +6,7 @@ pipeline {
         stage("Test stage") {
             steps {
                 echo "Pipeline works!"
-                sh "ls-l"
+                sh "ls -l"
             }
         }
     }
