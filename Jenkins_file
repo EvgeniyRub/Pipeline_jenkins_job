@@ -1,0 +1,18 @@
+pipeline {
+    agent { label "master" }
+
+    stages {
+
+        stage("Test stage") {
+            steps {
+                echo "Pipeline works!"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "Finish of pipeline"
+        }
+    }
+}
