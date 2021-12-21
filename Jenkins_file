@@ -1,7 +1,9 @@
 pipeline {
     agent { label "agent_linux_1" }
     
-    environment { }
+    environment {
+        BLA = "foo"
+     }
          
 
     stages {
@@ -13,8 +15,9 @@ pipeline {
                     )             
             }
         }
-        stage("Unit tests stage") {
+        stage({GREEN}"Unit tests stage"{END}) {
             steps {
+                echo "${BLA}"
                 sh "tox -e py27"
             }
         }
