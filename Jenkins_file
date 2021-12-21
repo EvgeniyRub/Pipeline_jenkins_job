@@ -1,5 +1,8 @@
 pipeline {
     agent { label "agent_linux_1" }
+    
+    environment { }
+         
 
     stages {
 
