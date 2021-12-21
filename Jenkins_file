@@ -3,17 +3,33 @@ pipeline {
 
     stages {
 
-        stage("Test stage") {
+        stage("Checkout stage") {
             steps {
-                echo "Pipeline works!"
-                sh "ls -l"
+                git(
+                    url:"https://github.com/Matrix-82/Pipeline_jenkins_job.git"
+                    )             
+            }
+        }
+        stage("Unit tests stage") {
+            steps {
+                sh "tox -e py27"
+            }
+        }
+        stage("Docs stage") {
+            steps {
+                sh "tox -e docs"
+            }
+        }
+        stage("Coverage stage") {
+            steps {
+                sh "tox -e cover"
             }
         }
     }
 
     post {
         success {
-            archiveArtifacts("doc/source/*, dist/*.whl")
+            archiveArtifacts("doc/source/*")
         }
     }
 }
