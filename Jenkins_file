@@ -36,8 +36,5 @@ pipeline {
         success {
             archiveArtifacts("doc/source/*,dist/*.whl")
         }
-        success {
-            coberturaReportFile('cover/coverage.xml')
-        }
-    }
+   }
 }
