@@ -34,8 +34,8 @@ pipeline {
 
     post {
         success {
-            archiveArtifacts("doc/source/*,dist/*.whl")
-            coberturaReportFile: 'cover/coverage.xml'
+            archiveArtifacts("doc/source/*,dist/*.whl"),
+            coberturaReportFile('cover/coverage.xml')
         }
     }
 }
