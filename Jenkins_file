@@ -1,9 +1,16 @@
 pipeline {
     agent { label "master" }
-
+    
     stages {
 
-        stage("Test stage") {
+        stage("Test stagen1") {
+            when {params.Branch == "master"}
+            steps {
+                echo "Pipeline works!"
+            }
+        }
+        stage("Test stage2") {
+            when {params.Branch !== "master"}
             steps {
                 echo "Pipeline works!"
             }
