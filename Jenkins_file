@@ -4,7 +4,6 @@ pipeline {
     stages {
 
         stage("Test stagen1") {
-            when {params.Branch == "main"}
             steps {
                 echo "Pipeline works!"
             }
