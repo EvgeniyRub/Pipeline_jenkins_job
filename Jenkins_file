@@ -5,12 +5,12 @@ pipeline {
 
         stage("Test stagen1") {
             steps {
-                echo "Pipeline works!"
+                echo "Pipeline works fine wit new fix!!"
             }
         }
         stage("Test stage2") {
             steps {
-                echo "Pipeline works!"
+                echo "Pipeline on stage 2!"
             }
         }
     }
