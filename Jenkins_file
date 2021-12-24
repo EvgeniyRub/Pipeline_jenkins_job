@@ -54,7 +54,7 @@ pipeline {
                 }
 
 
-                stage ('Python 3.4 Unit Tests') {
+                /* stage ('Python 3.4 Unit Tests') {
                     steps {
 
                         echo 'Run python 3.4 tests'
@@ -63,9 +63,9 @@ pipeline {
                             sh "${CMD} py34"
                         }
                     }
-                }
+                } */
 
-                stage ('Python 3.5 Unit Tests') {
+                /* stage ('Python 3.5 Unit Tests') {
                     steps {
 
                         echo 'Run python 3.5 tests'
@@ -74,7 +74,7 @@ pipeline {
                             sh "${CMD} py35"
                         }
                     }
-                }
+                } */
 
                 stage ('Docs syntax check') {
                     steps {
